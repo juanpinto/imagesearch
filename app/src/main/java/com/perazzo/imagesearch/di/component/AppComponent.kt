@@ -2,6 +2,7 @@ package com.perazzo.imagesearch.di.component
 
 import android.content.Context
 import com.perazzo.imagesearch.data.controller.ImagesController
+import com.perazzo.imagesearch.data.local.preferences.PreferencesManager
 import com.perazzo.imagesearch.di.module.ApiModule
 import com.perazzo.imagesearch.di.module.AppModule
 import com.perazzo.imagesearch.di.module.ControllerModule
@@ -15,6 +16,8 @@ interface AppComponent {
 
 
     fun context(): Context
+
+    fun preferecesManager() : PreferencesManager
 
 
     /**

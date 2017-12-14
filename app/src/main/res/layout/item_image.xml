@@ -20,6 +20,7 @@
         android:layout_marginStart="@dimen/spacing_small"
         android:background="@drawable/bg_gray_rounded"
         app:imageUrl="@{viewModel.url}"
+        android:onClick="@{(view) -> viewModel.shareImage(imageView)}"
         android:padding="@dimen/spacing_micro" />
 
 </layout>

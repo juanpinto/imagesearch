@@ -1,8 +1,12 @@
 package com.perazzo.imagesearch.images
 
+import android.content.Context
+import android.content.Intent
 import android.databinding.DataBindingUtil
+import android.graphics.Bitmap
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -15,6 +19,7 @@ import com.perazzo.imagesearch.data.models.Image
 import com.perazzo.imagesearch.databinding.ActivityImagesBinding
 import com.perazzo.imagesearch.di.component.ActivityComponent
 import com.perazzo.imagesearch.di.component.DaggerActivityComponent
+import com.perazzo.imagesearch.utils.ImageUtils
 import javax.inject.Inject
 
 class ImagesActivity : AppCompatActivity() {
