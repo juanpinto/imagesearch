@@ -20,6 +20,7 @@ import com.perazzo.imagesearch.databinding.ActivityImagesBinding
 import com.perazzo.imagesearch.di.component.ActivityComponent
 import com.perazzo.imagesearch.di.component.DaggerActivityComponent
 import com.perazzo.imagesearch.utils.ImageUtils
+import com.perazzo.imagesearch.utils.decorators.ItemOffsetDecorator
 import javax.inject.Inject
 
 class ImagesActivity : AppCompatActivity() {
@@ -50,6 +51,10 @@ class ImagesActivity : AppCompatActivity() {
     private fun setRecyclerView() {
         imagesAdapter = ImagesAdapter()
         imagesAdapter.setHasStableIds(true)
+
+        val itemDecoration = ItemOffsetDecorator(applicationContext, R.dimen.spacing_micro)
+        binding.recyclerViewImages.addItemDecoration(itemDecoration)
+
         binding.recyclerViewImages.itemAnimator = DefaultItemAnimator()
         val layoutManager = GridLayoutManager(this, 3)
         binding.recyclerViewImages.layoutManager = layoutManager
